@@ -159,6 +159,11 @@ video {
 .ftext{
     margin-left: 10%;
 }
+ 
+.fbox{
+    width:100%;
+    background-color: #0500076c;
+}
 
 
 
@@ -182,6 +187,10 @@ video {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .glow-pfp{
+        margin-right: 17%;
     }
      
 }
