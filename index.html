@@ -1,582 +1,440 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sweta's Portfolio</title>
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    <title>Sweta Kumari | TechXeno</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <meta name="description"
+        content="Portfolio of Sweta Kumari, Software Engineer building real-world systems with code, hardware & automation.">
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap" rel="stylesheet">
-    <link rel="icon" href="/assets/pfp.png" type="image/x-icon">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!--video background start-->
-<video autoplay muted loop id="video">
-    <source src="/assets/sf2.mp4" type="video/mp4">
-</video> 
-<!--video background end-->
+    <!-- Dynamic Background & Custom Cursor -->
+    <div id="bg-glow"></div>
+    <div id="cursor"></div>
+    <div id="cursor-follower"></div>
 
-<!--header start-->
-<header class="text-gray-600 body-font">
-  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-    <div class="himg w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
-      <img src="/assets/bnr.png">
-    </div>
-    <nav class="navbar md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400 flex flex-wrap items-center text-base justify-end">
-      <a class="mr-5 hover:text-gray-900" href="https://sweta04.carrd.co/" target="_blank">Carrd</a>
-      <a class="mr-5 hover:text-gray-900" href="https://drive.google.com/file/d/17iaWzHg4zuSO3-_uB-8xJ4grBr21Or99/view?usp=sharing" target="_blank">Resume</a>
-      <a class="mr-5 hover:text-gray-900" href="https://www.linkedin.com/in/sweta0411" target="_blank">LinkedIn</a>
-      <a class="mr-5 hover:text-gray-900" href="mailto:swetakumari0553@gmail.com" target="_blank">Contact</a>
-    </nav>
-    
-    
-  </div>
-</header>
-<!--header end-->
-
-<!--hero intro start-->
-<section class="text-gray-600 body-font">
-  <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-    <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-      <div class="top-1">
-        <h3>Hello! It's Me</h3>
-        <div class="toptitle">
-          <h1>Sweta Kumari</h1>
-        </div>
-      </div>
-      
-      <p class="mb-8 leading-relaxed">I am Sweta, Final-year Computer Science Engineering student with strong foundations in 
-Java, Object-Oriented Programming, Data Structures, and SQL. 
-Interested in backend development and building scalable software systems. 
-Experienced in developing full-stack and embedded systems projects involving 
-automation and real-time monitoring.</p>
-      <div class="socials">
-        <a href="https://www.linkedin.com/in/sweta0411" target="_main"><img src="assets/linkedin.png"></a>
-        <a href="https://www.github.com/sweta-04" target="_main"><img src="assets/github.png"></a>
-        <a href="https://www.twitter.com/sweta0553" target="_main"><img src="assets/twitter.png"></a>
-      </div>
-      <div class="connect-btn flex justify-center">
-        <button class="bt1">
-          <a href="mailto:swetakumari0553@gmail.com">Contact Me</a>
-        </button>
-      </div>
-    </div>
-    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-      <img class="object-cover object-center rounded" alt="hero" src="assets/photo.png" >
-    </div>
-  </div>
-</section>
-<!--hero intro end-->
-
-<!--highlights start
-<section class="text-gray-600 body-font">
-  <div class="container px-5 py-24 mx-auto">
-    <div class="flex flex-col text-center w-full mb-20">
-      <h1 class="text-xs text-red-500 tracking-widest font-medium title-font mb-1">Highlights</h1>
-      
-    </div>
-    <div class="flex flex-wrap -m-4">
-      <div class="p-4 md:w-1/3">
-        <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
-          <div class="flex items-center mb-3">
-            <div class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-red-500 text-white flex-shrink-0">
-              <div class="logoimg"><img src="https://cdn.pixabay.com/photo/2022/01/16/16/44/blogger-logo-6942640_1280.png"></div>
-            </div>
-            <h2 class="text-gray-900 text-lg title-font font-medium">Blogger</h2>
-          </div>
-          <div class="flex-grow">
-            <p class="leading-relaxed text-base">I possess expertise in crafting engaging articles about current tech trends and maintaining a robust online presence.</p><br>
-            <a class="mt-3 text-red-500 inline-flex items-center" href="https://techxeno.blogspot.com/">Learn More
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo magnetic" data-magnetic-strength="10">XENO<span class="dot">.</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#projects" class="hover-blur">Projects</a></li>
+                    <li><a href="#achievements" class="hover-blur">Achievements</a></li>
+                    <li><a href="#experience" class="hover-blur">Experience</a></li>
+                    <li><a href="https://drive.google.com/file/d/1xeEq6y99IfP4BMzO_dISQSlqTVASq4LR/view?usp=sharing"
+                            target="_blank" class="hover-blur">Resume</a></li>
+                </ul>
+            </nav>
+            <!-- Draggable fixed button -->
+            <a href="mailto:swetakumari0553@gmail.com" id="draggable-btn" class="btn magnetic sm"
+                data-magnetic-strength="25">
+                <span class="btn-text">CONNECT</span>
             </a>
-          </div>
         </div>
-      </div>
-      <div class="p-4 md:w-1/3">
-        <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
-          <div class="flex items-center mb-3">
-            <div class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-red-500 text-white flex-shrink-0">
-              <div class="logoimg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Amazon_icon.svg/2500px-Amazon_icon.svg.png"></div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="about">
+            <div class="container hero-layout">
+                <div class="hero-text-block">
+                    <div class="reveal-mask">
+                        <p class="greeting reveal-line delay-1">Software Engineer</p>
+                    </div>
+                    <div class="reveal-mask">
+                        <h1 class="hero-title reveal-line delay-2">SWETA</h1>
+                    </div>
+                    <div class="reveal-mask">
+                        <h1 class="hero-title outline reveal-line delay-3">KUMARI</h1>
+                    </div>
+
+                    <div class="reveal-mask mt-2">
+                        <p class="hero-desc reveal-line delay-4">
+                            Engineering complex, real-world ecosystems. Bridging the gap between front-end aesthetics,
+                            robust back-end logic, and integrated hardware automation.
+                        </p>
+                    </div>
+                    <div class="cta-wrapper reveal-up delay-5 mt-3">
+                        <a href="#projects" class="btn primary magnetic" data-magnetic-strength="30">
+                            <span class="btn-text">Explore Work</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/sweta0411" target="_blank" class="btn secondary magnetic"
+                            data-magnetic-strength="20">
+                            <span class="btn-text">LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <h2 class="text-gray-900 text-lg title-font font-medium">Amazon Associates</h2>
-          </div>
-          <div class="flex-grow">
-            <p class="leading-relaxed text-base">I excel at crafting compelling Amazon Affiliates content, adept at promoting products and driving online engagement.</p>
-            <a class="mt-3 text-red-500 inline-flex items-center" href="https://affiliate-program.amazon.in">Learn More
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="p-4 md:w-1/3">
-        <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
-          <div class="flex items-center mb-3">
-            <div class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-red-500 text-white flex-shrink-0">
-              <div class="logoimg">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/WordPress_blue_logo.svg/1024px-WordPress_blue_logo.svg.png">
+        </section>
 
-              </div>
+        <!-- Infinite Marquee / Proof Strip -->
+        <section class="ticker">
+            <div class="ticker-wrapper">
+                <div class="ticker-content">
+                    <span>10+ COMPETITIONS WON</span> <span class="bullet">•</span>
+                    <span>SIH INTERNAL HACKATHON WINNER</span> <span class="bullet">•</span>
+                    <span>EMBEDDED SYSTEMS</span> <span class="bullet">•</span>
+                    <span>FULL STACK MERN</span> <span class="bullet">•</span>
+                    <span>HARDWARE AUTOMATION</span> <span class="bullet">•</span>
+                    <span>CDAC 3D PRINTING WINNER</span> <span class="bullet">•</span>
+                    <span>IHMMC 26 4th GLOBALLY</span> <span class="bullet">•</span>
+
+                    <!-- Duplicated for infinite effect -->
+                    <span>10+ COMPETITIONS WON</span> <span class="bullet">•</span>
+                    <span>SIH INTERNAL HACKATHON WINNER</span> <span class="bullet">•</span>
+                    <span>EMBEDDED SYSTEMS</span> <span class="bullet">•</span>
+                    <span>FULL STACK MERN</span> <span class="bullet">•</span>
+                    <span>HARDWARE AUTOMATION</span> <span class="bullet">•</span>
+                    <span>CDAC 3D PRINTING WINNER</span> <span class="bullet">•</span>
+                    <span>IHMMC 26 - 4th GLOBALLY</span> <span class="bullet">•</span>
+                </div>
             </div>
-            <h2 class="text-gray-900 text-lg title-font font-medium">Wordpress</h2>
-          </div>
-          <div class="flex-grow">
-            <p class="leading-relaxed text-base">"I excel in crafting tech trend articles and maintaining a strong online presence on WordPress."</p><br>
-            <a class="mt-3 text-red-500 inline-flex items-center" href="https://www.wordpress.com/">Learn More
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-highlights end-->
+        </section>
 
-<!--about me start-->
-<section class="text-gray-600 body-font">
-  <div class="container px-5 py-24 mx-auto flex flex-col">
-    <div class="lg:w-4/6 mx-auto">
-      <div class="flex flex-col text-center w-full mb-20">
-        <h1 class="text-xs text-red-500 tracking-widest font-medium title-font mb-1">About Me</h1>
-        
-      </div>
-      
-      <div class="flex flex-col sm:flex-row mt-10">
-        <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
-          <div class="glow-pfp sm:w-40 sm:h-40 h-19 w-19 sm:mr-10 inline-flex items-center justify-center rounded-full bg-indigo-90 text-indigo-500 flex-shrink-0">
-            <img src="assets/pfp.png">
-          </div>
-          <div class="flex flex-col items-center text-center justify-center">
-            <h2 class="font-medium title-font mt-4 text-gray-900 text-lg">Sweta Kumari</h2>
-            <div class="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4"></div>
-            <p class="text-base"><i>"Striving to Pursue Excellence"</i></p>
-          </div>
-        </div>
-        <div class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
-          <p class="leading-relaxed text-lg mb-4">I am a final-year B.Tech Computer Science Engineering student at Siliguri Institute of Technology.<br>My primary interests include Java development, data structures, and building practical software systems.
-I enjoy working on projects that combine software with real-world applications, 
-such as system monitoring tools and automation utilities.<br>
-I am continuously improving my problem-solving skills and learning 
-modern software development practices.</p>
-          <a class="text-indigo-500 inline-flex items-center" href="https://www.linkedin.com/in/sweta0411">Learn More
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-              <path d="M5 12h14M12 5l7 7-7 7"></path>
-            </svg>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!--about me end-->
+        <!-- Featured Project (TechDeck) -->
+        <section class="featured padding-y" id="projects">
+            <div class="container">
+                <div class="section-title reveal-mask">
+                    <h2 class="reveal-line">Featured <span class="outline">Project.</span></h2>
+                </div>
 
-<!--projects start-->
-<section class="text-gray-600 body-font">
-  <div class="container px-5 py-24 mx-auto">
-    <div class="flex flex-col text-center w-full mb-20">
-      <h1 class="text-xs text-red-500 tracking-widest font-medium title-font mb-1">Projects</h1>
-    </div>
-    <div class="flex flex-wrap -m-4">
-      <div class="p-4 md:w-1/3">
-        <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-          <img class="proj" src="/assets/macropad.png" alt="project1">
-          <div class="p-6">
-            <h2 class="mytext4 tracking-widest text-xs title-font font-medium text-gray-400 mb-1">3D Printing</h2>
-            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Custom MacroPad System Monitor</h1>
-            <p class="leading-relaxed mb-3">Designed and built a programmable USB HID macro keypad with OLED display to 
-monitor real-time system metrics. 
-Developed Python scripts to fetch system data using HWiNFO API and integrated 
-hardware with host-side software for automation.</p>
-            <div class="flex items-center flex-wrap ">
-              <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0" href="https://technologyhell.in/products/macropad/" target="_main">Learn More
-                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 12h14"></path>
-                  <path d="M12 5l7 7-7 7"></path>
-                </svg>
-              </a>
-              <span class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
-                <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                  <circle cx="12" cy="12" r="3"></circle>
-                </svg>86
-              </span>
-              <span class="text-gray-400 inline-flex items-center leading-none text-sm">
-                <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
-                </svg>2
-              </span>
+                <div class="project-showcase">
+                    <div class="project-info">
+                        <span class="project-tag">Electronics & Python Engine</span>
+                        <h3 class="display-sm">TechDeck</h3>
+                        <p class="description">
+                            A highly-customizable standalone mechanical macro keypad (macropad). Features an OLED screen
+                            for real-time telemetry (CPU/GPU via HWiNFO APIs). Fully integrated with custom embedded C++
+                            firmware and a dynamic Python macro engine running on the host OS. Enclosures modelled in
+                            CATIA V5 and 3D printed.
+                        </p>
+                        <div class="achievements stack-icons mt-2">
+                            <div class="chip">🥇 CDAC 3D Printing Winner </div>
+                            <div class="chip">🥉 3rd Technovision Hardware </div>
+                            <div class="chip">🏆 4th Globally IHMMC '26 </div>
+                        </div>
+                        <a href="https://technologyhell.in/products/macropad/" target="_blank"
+                            class="btn secondary magnetic mt-3" data-magnetic-strength="20">
+                            <span class="btn-text">KNOW MORE</span>
+                        </a>
+                    </div>
+
+                    <div class="tilt-wrapper card-right">
+                        <div class="tilt-element glass-card">
+                            <div class="glare"></div>
+                            <img src="assets/techdeck_macropad_1775054399910.png" alt="TechDeck"
+                                class="project-img parallax-img">
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="p-4 md:w-1/3">
-        <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-          <img class="proj" src="assets/LMS.png" alt="project2">
-          <div class="p-6">
-            <h2 class="mytext4 tracking-widest text-xs title-font font-medium text-gray-400 mb-1">Java Project</h2>
-            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Library Management System</h1>
-            <p class="leading-relaxed mb-3">Developed a console-based library management application using Java and 
-object-oriented programming principles. Implemented features such as 
-book search, issue/return management, and fine calculation.</p><br>
-            <div class="flex items-center flex-wrap">
-              <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0" href="https://github.com/sweta-04/Library-Management-System">Learn More
-                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 12h14"></path>
-                  <path d="M12 5l7 7-7 7"></path>
-                </svg>
-              </a>
-              <span class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
-                <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                  <circle cx="12" cy="12" r="3"></circle>
-                </svg>5.2K
-              </span>
-              <span class="text-gray-400 inline-flex items-center leading-none text-sm">
-                <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
-                </svg>25
-              </span>
+        </section>
+
+        <!-- Dynamic Grid Projects -->
+        <section class="grid-projects padding-y">
+            <div class="container relative">
+                <div class="bg-letter outline">PRO</div>
+                <div class="section-title reveal-mask text-right">
+                    <h2 class="reveal-line">Digital <span class="outline">Ecosystems.</span></h2>
+                </div>
+
+                <div class="bento-grid mt-4">
+
+                    <!-- Box 1 -->
+                    <div class="bento-box tilt-wrapper">
+                        <div class="tilt-element glass-card inner-pad">
+                            <div class="glare"></div>
+                            <img src="assets/smart_hub_1775054372025.png" alt="Smart Infrastructure Hub"
+                                class="bento-img bg-parallax">
+                            <div class="bento-content">
+                                <h4>Smart Infrastructure Hub</h4>
+                                <p>Unified system integrating CCTV monitoring, automation, and local cloud storage into
+                                    a single intelligent platform.</p>
+                                <span class="tag">Linux • Networking • Computer Vision</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Box 2 -->
+                    <div class="bento-box tilt-wrapper">
+                        <div class="tilt-element glass-card inner-pad">
+                            <div class="glare"></div>
+                            <img src="assets/institutional_website_1775054466736.png" alt="Institutional Platform"
+                                class="bento-img bg-parallax">
+                            <div class="bento-content">
+                                <h4>Institutional Platform</h4>
+                                <p>Led development of a scalable web platform, improving performance, accessibility, and
+                                    overall user engagement.</p>
+                                <span class="tag">React • Node • MongoDB • SEO</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Box 3 -->
+                    <div class="bento-box tilt-wrapper">
+                        <div class="tilt-element glass-card inner-pad">
+                            <div class="glare"></div>
+                            <img src="assets/ideathon_platform_1775060680654.png" alt="Ideathon Platform"
+                                class="bento-img bg-parallax">
+                            <div class="bento-content">
+                                <h4>Ideathon Platform</h4>
+                                <p>Designed and deployed a complete event platform with structured workflows, forms, and
+                                    scalable hosting setup.</p>
+                                <span class="tag">HTML • Tailwind • Cloudflare</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Box 4 -->
+                    <div class="bento-box tilt-wrapper">
+                        <div class="tilt-element glass-card inner-pad">
+                            <div class="glare"></div>
+                            <img src="assets/home_nas_system_1775060662148.png" alt="Home NAS System"
+                                class="bento-img bg-parallax">
+                            <div class="bento-content">
+                                <h4>Home NAS System</h4>
+                                <p>Custom network storage solution with automated backups, private user spaces, and
+                                    secure local data access.</p>
+                                <span class="tag">Linux • Networking • Storage Systems</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="p-4 md:w-1/3">
-        <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-          <img class="proj" src="assets/sitsite.png" alt="project3">
-          <div class="p-6">
-            <h2 class="mytext4 tracking-widest text-xs title-font font-medium text-gray-400 mb-1">Full Stack</h2>
-            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Institutional Website Development</h1>
-            <p class="leading-relaxed mb-3">Worked with a team of four developers to design and develop a responsive 
-institutional website using React.js and modern frontend technologies. 
-Focused on performance optimization, responsive design, and structured content.</p>
-            <div class="flex items-center flex-wrap ">
-              <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0" href="https://github.com/TechnologyHell/SIT_ReVision" target="_blank">Learn More
-                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 12h14"></path>
-                  <path d="M12 5l7 7-7 7"></path>
-                </svg>
-              </a>
-              <span class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
-                <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                  <circle cx="12" cy="12" r="3"></circle>
-                </svg>120
-              </span>
-              <span class="text-gray-400 inline-flex items-center leading-none text-sm">
-                <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
-                </svg>3
-              </span>
+        </section>
+
+        <!-- Achievements Section -->
+        <section class="achievements padding-y" id="achievements">
+            <div class="container relative">
+                <div class="bg-letter outline" style="top: 0; transform: translateY(-30%); z-index: 0;">WIN</div>
+
+                <div class="section-title reveal-mask text-center">
+                    <h2 class="reveal-line">Hall of <span class="outline">Fame.</span></h2>
+                </div>
+
+                <div class="achievements-grid mt-4">
+                    <!-- Row 1 -->
+                    <div class="tilt-wrapper reveal-up">
+                        <div style="position: relative; overflow: hidden; height: 100%;"
+                            class="tilt-element glass-card flex-col achievement-card">
+                            <div class="glare"></div>
+                            <div
+                                style="position: absolute; right: -20px; bottom: -20px; font-size: 8rem; opacity: 0.05; pointer-events: none;">
+                                🥇</div>
+                            <span class="project-tag mb-1" style="font-size: 0.85rem; display: block;">Aug 2025</span>
+                            <h4 class="mb-1" style="font-size: 1.15rem; line-height: 1.4; flex-grow: 1;">Winner — Smart
+                                India Hackathon (Internal)</h4>
+                            <p class="description"
+                                style="font-size: 0.95rem; margin-bottom: 0; color: var(--text-muted);">Siliguri
+                                Institute of Technology</p>
+                        </div>
+                    </div>
+
+                    <div class="tilt-wrapper reveal-up delay-1">
+                        <div style="position: relative; overflow: hidden; height: 100%;"
+                            class="tilt-element glass-card flex-col achievement-card">
+                            <div class="glare"></div>
+                            <div
+                                style="position: absolute; right: -20px; bottom: -20px; font-size: 8rem; opacity: 0.05; pointer-events: none;">
+                                🌍</div>
+                            <span class="project-tag mb-1" style="font-size: 0.85rem; display: block;">2026</span>
+                            <h4 class="mb-1" style="font-size: 1.15rem; line-height: 1.4; flex-grow: 1;">4th Position —
+                                IHMMC 2026</h4>
+                            <p class="description"
+                                style="font-size: 0.95rem; margin-bottom: 0; color: var(--text-muted);">Asansol
+                                Engineering College (Global)</p>
+                        </div>
+                    </div>
+
+                    <div class="tilt-wrapper reveal-up delay-2">
+                        <div style="position: relative; overflow: hidden; height: 100%;"
+                            class="tilt-element glass-card flex-col achievement-card">
+                            <div class="glare"></div>
+                            <div
+                                style="position: absolute; right: -20px; bottom: -20px; font-size: 8rem; opacity: 0.05; pointer-events: none;">
+                                🏆</div>
+                            <span class="project-tag mb-1" style="font-size: 0.85rem; display: block;">Aug 2025</span>
+                            <h4 class="mb-1" style="font-size: 1.15rem; line-height: 1.4; flex-grow: 1;">Winner — Vision
+                                to Venture</h4>
+                            <p class="description"
+                                style="font-size: 0.95rem; margin-bottom: 0; color: var(--text-muted);">Eureka, IIT
+                                Bombay</p>
+                        </div>
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div class="tilt-wrapper reveal-up delay-3">
+                        <div style="position: relative; overflow: hidden; height: 100%;"
+                            class="tilt-element glass-card flex-col achievement-card">
+                            <div class="glare"></div>
+                            <div
+                                style="position: absolute; right: -20px; bottom: -20px; font-size: 8rem; opacity: 0.05; pointer-events: none;">
+                                ⚙️</div>
+                            <span class="project-tag mb-1" style="font-size: 0.85rem; display: block;">Jul 2025</span>
+                            <h4 class="mb-1" style="font-size: 1.15rem; line-height: 1.4; flex-grow: 1;">Winner — CDAC
+                                Training Programme</h4>
+                            <p class="description"
+                                style="font-size: 0.95rem; margin-bottom: 0; color: var(--text-muted);">CDAC & MeitY</p>
+                        </div>
+                    </div>
+
+                    <div class="tilt-wrapper reveal-up delay-4">
+                        <div style="position: relative; overflow: hidden; height: 100%;"
+                            class="tilt-element glass-card flex-col achievement-card">
+                            <div class="glare"></div>
+                            <div
+                                style="position: absolute; right: -20px; bottom: -20px; font-size: 8rem; opacity: 0.05; pointer-events: none;">
+                                🤖</div>
+                            <span class="project-tag mb-1" style="font-size: 0.85rem; display: block;">Feb 2026</span>
+                            <h4 class="mb-1" style="font-size: 1.15rem; line-height: 1.4; flex-grow: 1;">Runner-Up —
+                                Robosoccer (Technovision)</h4>
+                            <p class="description"
+                                style="font-size: 0.95rem; margin-bottom: 0; color: var(--text-muted);">SIT Technovision
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="tilt-wrapper reveal-up delay-5">
+                        <div style="position: relative; overflow: hidden; height: 100%;"
+                            class="tilt-element glass-card flex-col achievement-card">
+                            <div class="glare"></div>
+                            <div
+                                style="position: absolute; right: -20px; bottom: -20px; font-size: 8rem; opacity: 0.05; pointer-events: none;">
+                                💻</div>
+                            <span class="project-tag mb-1" style="font-size: 0.85rem; display: block;">Apr 2025</span>
+                            <h4 class="mb-1" style="font-size: 1.15rem; line-height: 1.4; flex-grow: 1;">Winner — SIT
+                                Hack-A-Verse</h4>
+                            <p class="description"
+                                style="font-size: 0.95rem; margin-bottom: 0; color: var(--text-muted);">Computer
+                                Engineering Society, SIT</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!--projects end-->
+        </section>
 
-<!--internship start-->
-<section class="text-gray-600 body-font">
-  <center><h1 class="text-xs text-red-500 tracking-widest font-medium title-font mb-1">Internships</h1></center>
-<div class="container px-5 py-24 mx-auto flex flex-wrap">
-  <div class="flex flex-wrap -mx-4 mt-auto mb-auto lg:w-1/2 sm:w-2/3 content-start sm:pr-10">
-    <div class="w-full sm:p-4 px-4 mb-6">
-      <h1 class="mytext3">WebMarvel.IN</h1>
-      <h1 class="title-font font-medium text-xl mb-2 text-gray-900">Technical Intern
-      </h1>
-      <div class="leading-relaxed">Worked as a Technical Intern at WebMarvel.in where I assisted the development 
-team in implementing website features and debugging frontend issues. 
-Participated in requirement discussions with clients and helped test 
-web applications before deployment using tools like Postman.</div>
-    </div>
-  </div>
-  <div class="glow-web lg:w-1/2 sm:w-1/3 w-full rounded-lg overflow-hidden mt-6 sm:mt-0">
-    <img class="web object-center w-full h-full" src="assets/wm.png" alt="stats">
-  </div>
-</div>
-</section>
-<!--internship end-->
+        <!-- Experience Timeline Overhaul -->
+        <section class="experience padding-y" id="experience">
+            <div class="container container-sm relative">
+                <div class="bg-letter left outline">EXP</div>
 
-<!--skillset start-->
-<section class="text-gray-600 body-font">
-  <div class="container px-5 py-24 mx-auto">
-    <div class="flex flex-col text-center w-full mb-20">
-      <h1 class="text-xs text-red-500 tracking-widest font-medium title-font mb-1">My SkillSet</h1>
-      
-    </div>
-    <div class="flex flex-wrap -m-4">
-      <div class="p-4 lg:w-1/4 sm:w-1/2 w-full">
-        <h2 class="font-medium title-font tracking-widest text-gray-900 mb-4 text-sm text-center sm:text-left">Core Computer Science</h2>
-        <nav class="flex flex-col sm:items-start sm:text-left text-center items-center -mb-1 space-y-2.5">
-          <a>
-            <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M20 6L9 17l-5-5"></path>
-              </svg>
-            </span>Data Structures
-          </a>
-          <a>
-            <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M20 6L9 17l-5-5"></path>
-              </svg>
-            </span>Object-Oriented Programming
+                <div class="section-title reveal-mask">
+                    <h2 class="reveal-line">Professional <span class="outline">Journey.</span></h2>
+                </div>
 
-          </a>
-          <a>
-            <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M20 6L9 17l-5-5"></path>
-              </svg>
-            </span>DBMS
-          </a>
-          <a>
-            <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M20 6L9 17l-5-5"></path>
-              </svg>
-            </span>Operating Systems
-          </a>
-        </nav>
-      </div>
-      <div class="p-4 lg:w-1/4 sm:w-1/2 w-full">
-        <h2 class="font-medium title-font tracking-widest text-gray-900 mb-4 text-sm text-center sm:text-left">Tools</h2>
-        <nav class="flex flex-col sm:items-start sm:text-left text-center items-center -mb-1 space-y-2.5">
-          <a>
-            <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M20 6L9 17l-5-5"></path>
-              </svg>
-            </span>Git
-          </a>
-          <a>
-            <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M20 6L9 17l-5-5"></path>
-              </svg>
-            </span>GitHub
-          </a>
-          <a>
-            <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M20 6L9 17l-5-5"></path>
-              </svg>
-            </span>Postman
-          </a>
-          <a>
-            <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M20 6L9 17l-5-5"></path>
-              </svg>
-            </span>VS Code
-          </a>
-        </nav>
-      </div>
-      <div class="p-4 lg:w-1/4 sm:w-1/2 w-full">
-        <h2 class="font-medium title-font tracking-widest text-gray-900 mb-4 text-sm text-center sm:text-left">Languages</h2>
-        <nav class="flex flex-col sm:items-start sm:text-left text-center items-center -mb-1 space-y-2.5">
-          <a>
-            <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M20 6L9 17l-5-5"></path>
-              </svg>
-            </span>Python
-          </a>
-          <a>
-            <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M20 6L9 17l-5-5"></path>
-              </svg>
-            </span>C
-          </a>
-          <a>
-            <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M20 6L9 17l-5-5"></path>
-              </svg>
-            </span>Java
-          </a>
-          <a>
-            <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M20 6L9 17l-5-5"></path>
-              </svg>
-            </span>Javascript
-          </a>
-        </nav>
-      </div>
-      <div class="p-4 lg:w-1/4 sm:w-1/2 w-full">
-        <h2 class="font-medium title-font tracking-widest text-gray-900 mb-4 text-sm text-center sm:text-left">Web Development</h2>
-        <nav class="flex flex-col sm:items-start sm:text-left text-center items-center -mb-1 space-y-2.5">
-          <a>
-            <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M20 6L9 17l-5-5"></path>
-              </svg>
-            </span>HTML | CSS
-          </a>
-          <a>
-            <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M20 6L9 17l-5-5"></path>
-              </svg>
-            </span>React JS
-          </a>
-          <a>
-            <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M20 6L9 17l-5-5"></path>
-              </svg>
-            </span>Wordpress
-          </a>
-          <a>
-            <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewBox="0 0 24 24">
-                <path d="M20 6L9 17l-5-5"></path>
-              </svg>
-            </span>TailwindCSS
-          </a>
-        </nav>
-      </div>
-    </div>
-  </div>
-</section>
-<!--skillset end--> 
+                <div class="timeline-container mt-4">
 
-<!--education start-->
-<section class="text-gray-600 body-font">
-  <div class="container px-5 py-24 mx-auto">
-    <div class="flex flex-col text-center w-full mb-20">
-      <h1 class="text-xs text-red-500 tracking-widest font-medium title-font mb-1">My Education</h1>
-    </div>
-    <div class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
-      <div class="glow-container sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
-        <img src="assets/sit.png">
-      </div>
-      <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-        <h2 class="text-gray-900 text-lg title-font font-medium mb-2">Siliguri Institute of Technology</h2>
-        <div class="mytext2">
-          <p class="leading-relaxed text-base">Bachelor of Technology in Computer Science Engineering<br>2022 - Present<br></p>
-        </div>
-        <a class="mt-3 text-indigo-500 inline-flex items-center"href="https://www.sittechno.org/sit119.php">Learn More
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-            <path d="M5 12h14M12 5l7 7-7 7"></path>
-          </svg>
-        </a>
-      </div>
-    </div>
-    <div class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
-      <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-        <h2 class="text-gray-900 text-lg title-font font-medium mb-2">Doon Heritage School</h2>
-        <div class="mytext2">
-        <p class="leading-relaxed text-base">Senior Secondary, CBSE<br>Mathematics and Computer Science<br>2019 - 2021</p>
-      </div>
-        <a class="mt-3 text-indigo-500 inline-flex items-center" href="https://www.doonheritageschool.co.in/">Percentage : 84%
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-            <path d="M5 12h14M12 5l7 7-7 7"></path>
-          </svg>
-        </a>
-      </div>
-      <div class="glow-container sm:w-32 sm:order-none order-first sm:h-32 h-20 w-20 sm:ml-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
-        <img src="assets/dhs.png">
-      </div>
-    </div>
-    <div class="flex items-center lg:w-3/5 mx-auto sm:flex-row flex-col">
-      <div class="glow-container sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
-       <img src="assets/dav.png">
-         
-      </div>
-      <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-        <h2 class="text-gray-900 text-lg title-font font-medium mb-2">DAV Public School</h2>
-        <div class="mytext2">
-        <p class="leading-relaxed text-base">Secondary, CBSE<br>2007 - 2019</p>
-      </div>
-        <a class="mt-3 text-indigo-500 inline-flex items-center" href="http://davrunnisaidpur.org/">Percentage : 91%
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-            <path d="M5 12h14M12 5l7 7-7 7"></path>
-          </svg>
-        </a>
-      </div>
-    </div>
-    
-  </div>
-</section>
-<!--education end--> 
+                    <div class="timeline-row reveal-up">
+                        <div class="time">March 2026 - Present</div>
+                        <div class="role-group">
+                            <h4>Apprentice</h4>
+                            <p class="company"><a href="https://www.cloudkaptan.com/" target="_blank"
+                                    style="color: inherit; text-decoration: none;" class="hover-blur">Cloud Kaptan</a>
+                            </p>
+                        </div>
+                        <div class="timeline-desc">Working on cloud-based application development, gaining hands-on
+                            experience in scalable systems, APIs, and enterprise platforms.</div>
+                    </div>
 
-<!--footer start--> 
-<footer class="text-gray-600 body-font">
-  <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
-    <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
-      <img src="/assets/bnr.png">
-      
-    </div>
-    <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
-      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Socials</h2>
-        <nav class="list-none mb-10">
-          <li>
-            <a class="text-gray-600 hover:text-gray-800" href="https://www.linkedin.com/in/sweta0411">LinkedIn</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800" href="https://www.github.com/sweta-04">GitHub</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800" href="https://www.twitter.com/sweta0553">Twitter</a>
-          </li>
-        </nav>
-      </div>
-      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">My WriteUps</h2>
-        <nav class="list-none mb-10">
-          <li>
-            <a class="text-gray-600 hover:text-gray-800" href="https://techxeno.blogspot.com/">Blogger</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800" href="https://webmarvel.in/blogs/blog_1">Website</a>
-          </li>
-        </nav>
-      </div>
-      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">My Works</h2>
-        <nav class="list-none mb-10">
-          <li>
-            <a class="text-gray-600 hover:text-gray-800" href="https://sweta04.carrd.co/">Carrd</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800" href="https://www.webmarvel.in/">WebMarvel.in</a>
-          </li>
-        </nav>
-      </div>
-      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Projects</h2>
-        <nav class="list-none mb-10">
-          <li>
-            <a class="text-gray-600 hover:text-gray-800" href="https://technologyhell.in/products/macropad/" target="_blank">Custom Macropad</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800" href="https://github.com/sweta-04/Library-Management-System" target="_blank">Library Mgmt System</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800" href="https://github.com/TechnologyHell/SIT_ReVision" target="_blank">SIT ReVision</a>
-          </li>
-        </nav>
-      </div>
-    </div>
-  </div>
- 
-</footer>
-<!--footer end--> 
+                    <div class="timeline-row reveal-up delay-1">
+                        <div class="time">Dec 2024 - Present</div>
+                        <div class="role-group">
+                            <h4>Vice President</h4>
+                            <p class="company"><a href="https://ideathon.pages.dev/" target="_blank"
+                                    style="color: inherit; text-decoration: none;" class="hover-blur">SIT Ideathon</a>
+                            </p>
+                        </div>
+                        <div class="timeline-desc">Leading event architecture, managing technical roadmaps, and
+                            organizing major events.</div>
+                    </div>
 
+                    <div class="timeline-row reveal-up delay-2">
+                        <div class="time">July - Oct 2023</div>
+                        <div class="role-group">
+                            <h4>Technical Intern</h4>
+                            <p class="company"><a href="https://webmarvel.in/" target="_blank"
+                                    style="color: inherit; text-decoration: none;" class="hover-blur">WebMarvel.in</a>
+                            </p>
+                        </div>
+                        <div class="timeline-desc">Bridged client needs and engineering output for complex web
+                            applications. Streamlined requirements gathering processes.</div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer / Contact -->
+        <footer class="footer padding-y" id="contact">
+            <div class="container text-center">
+                <div class="reveal-mask mx-auto">
+                    <h2 class="display-lg reveal-line">Let's <span class="text-gradient hover-trigger">Create.</span>
+                    </h2>
+                </div>
+                <p class="footer-subtext mt-2 mx-auto reveal-up">Always building, experimenting, and solving real-world
+                    problems. Open to collaborations, opportunities, and impactful projects.</p>
+
+                <div class="contact-cta mt-4 mb-4 reveal-up delay-1">
+                    <a href="mailto:swetakumari0553@gmail.com" class="magnetic-huge" data-magnetic-strength="50">
+                        <div class="circle-btn">Say Hi!</div>
+                    </a>
+                </div>
+
+                <div class="footer-bottom">
+                    <div class="socials">
+                        <a href="https://github.com/sweta-04" target="_blank" class="hover-blur shrink"
+                            aria-label="GitHub">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/sweta0411" target="_blank" class="hover-blur shrink"
+                            aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/sweta.xeno/" target="_blank" class="hover-blur shrink"
+                            aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                        <a href="https://leetcode.com/u/techxeno/" target="_blank" class="hover-blur shrink"
+                            aria-label="LeetCode">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                <path
+                                    d="M16.102 17.93l-2.697 2.607c-.466.467-1.111.662-1.823.662s-1.357-.195-1.824-.662l-4.332-4.363c-.467-.467-.702-1.15-.702-1.863s.235-1.357.702-1.824l4.319-4.38c.467-.467 1.111-.662 1.823-.662s1.357.195 1.824.662l2.711 2.607c.22.207.56.207.78 0l1.396-1.385c.208-.207.208-.546 0-.753l-4.502-4.365c-.753-.755-1.996-.755-2.751 0l-5.461 5.305c-.328.328-.501.782-.501 1.25s.173.908.501 1.236l5.461 5.461c.755.755 1.998.755 2.751 0l4.502-4.363c.208-.207.208-.546 0-.753l-1.396-1.385c-.221-.207-.56-.207-.78 0zM20.932 10.709h-6.224c-.292 0-.528.235-.528.528v1.947c0 .292.236.528.528.528h6.224c.292 0 .528-.236.528-.528v-1.947c0-.293-.236-.528-.528-.528z" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="copy">
+                        &copy; 2026 TECHXENO
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
